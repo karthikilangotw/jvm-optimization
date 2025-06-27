@@ -1,0 +1,42 @@
+{
+    "timestamp": "2025-06-27T08:29:11+05:30",
+    "heap": {
+        "used": 80,
+        "committed": 1996,
+        "max": 5879
+    },
+    "nonheap": {
+        "used": 58,
+        "committed": 59,
+        "max": 1071
+    },
+    "gc": {
+        "collections": ,
+        "time_ms": 
+    },
+    "threads": {
+        "live": 22.0,
+        "peak": 22.0,
+        "daemon": 18.0
+    },
+    "classes": {
+        "loaded": 9997.0,
+        "total": 9997.,
+        "unloaded": 0.0
+    },
+    "cpu": {
+        "process_percent": 0,
+        "system_percent": 0
+    },
+    "file_descriptors": {
+        "open": 13.0,
+        "max": 1048576.0
+    },
+    "memory_pools": {
+        "eden_mb": ,
+        "survivor_mb": ,
+        "oldgen_mb": ,
+        "metaspace_mb": 40,
+        "codecache_mb": 
+    }
+}

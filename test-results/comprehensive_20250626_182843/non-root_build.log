@@ -1,0 +1,42 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile-non-root
+#1 transferring dockerfile: 768B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/amazoncorretto:21-alpine
+#2 DONE 1.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/amazoncorretto:21-alpine@sha256:937a7f5c5f7ec41315f1c7238fd9ec0347684d6d99e086db81201ca21d1f5778
+#4 DONE 0.0s
+
+#5 [2/6] WORKDIR /app
+#5 CACHED
+
+#6 [3/6] RUN apk add --no-cache ca-certificates
+#6 CACHED
+
+#7 [internal] load build context
+#7 transferring context: 224B done
+#7 DONE 0.0s
+
+#8 [4/6] RUN addgroup -g 10001 -S appgroup &&     adduser -u 10001 -S appuser -G appgroup
+#8 DONE 0.1s
+
+#9 [5/6] COPY build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
+#9 DONE 0.1s
+
+#10 [6/6] RUN chown appuser:appgroup app.jar
+#10 DONE 0.2s
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 writing image sha256:833c1014b35b43516da148416ecd6ac9268ae3cb870d541bd220356fd72a3282 done
+#11 naming to docker.io/library/jvm-test-non-root done
+#11 DONE 0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/avxuxj032vk3f80zgoataunwi

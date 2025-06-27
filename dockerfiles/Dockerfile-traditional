@@ -1,0 +1,10 @@
+# Traditional JVM setup using pre-built JAR
+FROM amazoncorretto:21
+WORKDIR /app
+
+# Copy the pre-built JAR from host libs folder
+COPY build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
+
+# Expose port and define entrypoint
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]

@@ -1,0 +1,9 @@
+Configuration,Build_Time,Image_Size_MB,Startup_Time,Memory_Usage_MB,CPU_Usage_Percent,Heap_Used_MB,Heap_Max_MB,GC_Collections,GC_Time_MS,Status
+main,6,611,3,212.05,.22,72,5879,0,0,SUCCESS
+traditional,30,553,3,215.13,.36,43,1959,0,0,SUCCESS
+alpine,22,96.1,TIMEOUT,0,0,0,0,0,0,FAILED
+distroless,32,233,2,213.21,.31,44,1959,0,0,SUCCESS
+jre-slim,26,349,3,187.15,.34,42,1959,0,0,SUCCESS
+genzgc,4,349,3,406.43,.52,116,3920,0,0,SUCCESS
+non-root,5,380,3,185.11,.31,45,1959,0,0,SUCCESS
+miscellaneous,5,349,3,489.34,.57,390,12540,0,0,SUCCESS

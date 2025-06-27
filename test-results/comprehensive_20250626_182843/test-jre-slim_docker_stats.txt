@@ -1,0 +1,2 @@
+CONTAINER       CPU %     MEM USAGE / LIMIT
+test-jre-slim   0.28%     188.2MiB / 512MiB

@@ -1,0 +1,23 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2025-06-26T13:08:11.472Z  INFO 1 --- [demo] [           main] c.j.optimization.demo.DemoApplicationKt  : Starting DemoApplicationKt v0.0.1-SNAPSHOT using Java 21.0.7 with PID 1 (/app/app.jar started by root in /app)
+2025-06-26T13:08:11.473Z  INFO 1 --- [demo] [           main] c.j.optimization.demo.DemoApplicationKt  : No active profile set, falling back to 1 default profile: "default"
+2025-06-26T13:08:12.211Z  INFO 1 --- [demo] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-26T13:08:12.219Z  INFO 1 --- [demo] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-26T13:08:12.219Z  INFO 1 --- [demo] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-26T13:08:12.234Z  INFO 1 --- [demo] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-26T13:08:12.234Z  INFO 1 --- [demo] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 737 ms
+2025-06-26T13:08:12.543Z  INFO 1 --- [demo] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 5 endpoints beneath base path '/actuator'
+2025-06-26T13:08:12.571Z  INFO 1 --- [demo] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-26T13:08:12.582Z  INFO 1 --- [demo] [           main] c.j.optimization.demo.DemoApplicationKt  : Started DemoApplicationKt in 1.292 seconds (process running for 1.508)
+2025-06-26T13:08:13.253Z  INFO 1 --- [demo] [nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-26T13:08:13.253Z  INFO 1 --- [demo] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-26T13:08:13.254Z  INFO 1 --- [demo] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

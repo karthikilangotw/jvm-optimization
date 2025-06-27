@@ -1,0 +1,101 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "JVM Optimization Demo - Metrics Dashboard",
+    "tags": ["jvm", "spring-boot", "micrometer"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "id": 1,
+        "title": "JVM Memory Usage",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "jvm_memory_used_bytes{application=\"demo\"}",
+            "legendFormat": "{{area}} - Used"
+          },
+          {
+            "expr": "jvm_memory_max_bytes{application=\"demo\"}",
+            "legendFormat": "{{area}} - Max"
+          }
+        ],
+        "yAxes": [
+          {
+            "unit": "bytes"
+          }
+        ],
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "id": 2,
+        "title": "GC Pause Time",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "rate(jvm_gc_pause_seconds_sum{application=\"demo\"}[5m])",
+            "legendFormat": "{{gc}} - Pause Time Rate"
+          }
+        ],
+        "yAxes": [
+          {
+            "unit": "s"
+          }
+        ],
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 0
+        }
+      },
+      {
+        "id": 3,
+        "title": "HTTP Request Rate",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "rate(http_server_requests_seconds_count{application=\"demo\"}[5m])",
+            "legendFormat": "{{method}} {{uri}}"
+          }
+        ],
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 8
+        }
+      },
+      {
+        "id": 4,
+        "title": "JVM Threads",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "jvm_threads_live_threads{application=\"demo\"}",
+            "legendFormat": "Live Threads"
+          },
+          {
+            "expr": "jvm_threads_peak_threads{application=\"demo\"}",
+            "legendFormat": "Peak Threads"
+          }
+        ],
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 8
+        }
+      }
+    ],
+    "time": {
+      "from": "now-5m",
+      "to": "now"
+    },
+    "refresh": "5s"
+  }
+}

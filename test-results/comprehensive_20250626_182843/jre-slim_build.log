@@ -1,0 +1,83 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile-jre-slim
+#1 transferring dockerfile: 463B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/amazoncorretto:21-alpine
+#2 ...
+
+#3 [auth] library/amazoncorretto:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/amazoncorretto:21-alpine
+#2 DONE 3.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 224B done
+#5 DONE 0.0s
+
+#6 [1/4] FROM docker.io/library/amazoncorretto:21-alpine@sha256:937a7f5c5f7ec41315f1c7238fd9ec0347684d6d99e086db81201ca21d1f5778
+#6 resolve docker.io/library/amazoncorretto:21-alpine@sha256:937a7f5c5f7ec41315f1c7238fd9ec0347684d6d99e086db81201ca21d1f5778 done
+#6 sha256:cde18e35edefa2c024facd429ada4109ea6597d095b517a42915666447c92bb6 1.37kB / 1.37kB done
+#6 sha256:f805f6ed7e7c956efd16cd0062a078428c9c11dbaa00e5ee5094ae0c6f0407a8 2.42kB / 2.42kB done
+#6 sha256:6e771e15690e2fabf2332d3a3b744495411d6e0b00b2aea64419b58b0066cf81 0B / 3.99MB 0.2s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 0B / 157.00MB 0.2s
+#6 sha256:937a7f5c5f7ec41315f1c7238fd9ec0347684d6d99e086db81201ca21d1f5778 2.67kB / 2.67kB done
+#6 sha256:6e771e15690e2fabf2332d3a3b744495411d6e0b00b2aea64419b58b0066cf81 1.05MB / 3.99MB 0.5s
+#6 sha256:6e771e15690e2fabf2332d3a3b744495411d6e0b00b2aea64419b58b0066cf81 2.10MB / 3.99MB 0.7s
+#6 sha256:6e771e15690e2fabf2332d3a3b744495411d6e0b00b2aea64419b58b0066cf81 3.15MB / 3.99MB 0.8s
+#6 extracting sha256:6e771e15690e2fabf2332d3a3b744495411d6e0b00b2aea64419b58b0066cf81
+#6 sha256:6e771e15690e2fabf2332d3a3b744495411d6e0b00b2aea64419b58b0066cf81 3.99MB / 3.99MB 0.8s done
+#6 extracting sha256:6e771e15690e2fabf2332d3a3b744495411d6e0b00b2aea64419b58b0066cf81 0.1s done
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 8.39MB / 157.00MB 1.8s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 17.83MB / 157.00MB 2.8s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 26.21MB / 157.00MB 3.5s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 34.60MB / 157.00MB 4.3s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 42.99MB / 157.00MB 5.1s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 51.38MB / 157.00MB 5.8s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 59.77MB / 157.00MB 6.6s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 69.21MB / 157.00MB 7.5s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 79.69MB / 157.00MB 8.4s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 89.13MB / 157.00MB 9.3s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 97.52MB / 157.00MB 10.1s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 106.95MB / 157.00MB 10.9s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 115.34MB / 157.00MB 11.9s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 124.78MB / 157.00MB 12.8s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 135.27MB / 157.00MB 13.7s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 143.65MB / 157.00MB 14.6s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 152.04MB / 157.00MB 15.3s
+#6 sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 157.00MB / 157.00MB 15.8s done
+#6 extracting sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9
+#6 extracting sha256:7555fef64a86b783e2345a5f68fdc874760e3aef8c712ac2699bba1cc222e7d9 1.7s done
+#6 DONE 17.5s
+
+#7 [2/4] WORKDIR /app
+#7 DONE 0.1s
+
+#8 [3/4] RUN apk add --no-cache ca-certificates
+#8 0.164 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/aarch64/APKINDEX.tar.gz
+#8 1.075 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/aarch64/APKINDEX.tar.gz
+#8 2.182 fetch https://apk.corretto.aws/aarch64/APKINDEX.tar.gz
+#8 2.308 20BD0493FFFF0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:ssl/statem/statem_clnt.c:2103:
+#8 2.310 WARNING: fetching https://apk.corretto.aws: Permission denied
+#8 2.385 (1/1) Installing ca-certificates (20241121-r1)
+#8 2.492 Executing busybox-1.37.0-r12.trigger
+#8 2.497 Executing ca-certificates-20241121-r1.trigger
+#8 2.528 OK: 354 MiB in 18 packages
+#8 DONE 2.6s
+
+#9 [4/4] COPY build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
+#9 DONE 0.1s
+
+#10 exporting to image
+#10 exporting layers 0.0s done
+#10 writing image sha256:bcc03bfd78958be6f861771838928629c2ec8e2dc2e2b4a61022932374733e9d done
+#10 naming to docker.io/library/jvm-test-jre-slim done
+#10 DONE 0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/htc18f7b4j4z6atjwj0kag3zg

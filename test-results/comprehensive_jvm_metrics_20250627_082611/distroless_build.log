@@ -1,0 +1,33 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile-distroless
+#1 transferring dockerfile: 380B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for gcr.io/distroless/java21-debian12:latest
+#2 DONE 1.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/3] FROM gcr.io/distroless/java21-debian12:latest@sha256:7c05bf8a64ff1a70a16083e9bdd35b463aa0d014c2fc782d31d13ea7a61de633
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 224B done
+#5 DONE 0.0s
+
+#6 [2/3] WORKDIR /app
+#6 CACHED
+
+#7 [3/3] COPY build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 writing image sha256:4bfb8cc687c8da13d01c0fd8ac5fdf8006e3f30c8117c6d40347dc3840525544 done
+#8 naming to docker.io/library/jvm-metrics-distroless done
+#8 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/k7weshj21vdnb7qbt8t8bs368

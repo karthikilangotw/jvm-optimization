@@ -1,0 +1,46 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile-miscelleneous
+#1 transferring dockerfile: 1.60kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/amazoncorretto:21-alpine
+#2 ...
+
+#3 [auth] library/amazoncorretto:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/amazoncorretto:21-alpine
+#2 DONE 2.2s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/amazoncorretto:21-alpine@sha256:937a7f5c5f7ec41315f1c7238fd9ec0347684d6d99e086db81201ca21d1f5778
+#5 DONE 0.0s
+
+#6 [2/5] WORKDIR /app
+#6 CACHED
+
+#7 [3/5] RUN apk add --no-cache ca-certificates
+#7 CACHED
+
+#8 [internal] load build context
+#8 transferring context: 224B done
+#8 DONE 0.0s
+
+#9 [4/5] RUN mkdir -p /app/logs /app/dumps
+#9 DONE 0.1s
+
+#10 [5/5] COPY build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
+#10 DONE 0.1s
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 writing image sha256:e0641dff5f037fafe8765f82df84575166ddd27abe81071b74b829c5598a8ade
+#11 writing image sha256:e0641dff5f037fafe8765f82df84575166ddd27abe81071b74b829c5598a8ade done
+#11 naming to docker.io/library/jvm-test-miscellaneous done
+#11 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/zlv9gaq1ie1ekbwx1d1zuzend

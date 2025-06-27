@@ -1,0 +1,13 @@
+# Generational ZGC optimized runtime using pre-built JAR
+FROM amazoncorretto:21-alpine
+WORKDIR /app
+
+# Install CA certificates for SSL support
+RUN apk add --no-cache ca-certificates
+
+# Copy the pre-built JAR from host libs folder
+COPY build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
+
+# Expose port and define entrypoint with Generational ZGC flags
+EXPOSE 8080
+ENTRYPOINT ["java", "-XX:+UseZGC", "-XX:+ZGenerational", "-jar", "app.jar"]

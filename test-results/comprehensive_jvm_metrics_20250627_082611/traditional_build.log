@@ -1,0 +1,33 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile-traditional
+#1 transferring dockerfile: 362B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/amazoncorretto:21
+#2 DONE 1.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/3] FROM docker.io/library/amazoncorretto:21@sha256:722267dea6e71f73a2897c3cb1936e713764471874e5b2de7660c96b9998a225
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 224B done
+#5 DONE 0.0s
+
+#6 [2/3] WORKDIR /app
+#6 CACHED
+
+#7 [3/3] COPY build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 writing image sha256:b4a945ba0f09675380bc8b4cef994a878a5d4b3c9559c4f5414567372da87b32 done
+#8 naming to docker.io/library/jvm-metrics-traditional done
+#8 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/da314bz09kwj64elp8h4z7nx8

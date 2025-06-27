@@ -1,0 +1,36 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile-genzgc
+#1 transferring dockerfile: 477B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/amazoncorretto:21-alpine
+#2 DONE 1.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/amazoncorretto:21-alpine@sha256:937a7f5c5f7ec41315f1c7238fd9ec0347684d6d99e086db81201ca21d1f5778
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 224B done
+#5 DONE 0.0s
+
+#6 [2/4] WORKDIR /app
+#6 CACHED
+
+#7 [3/4] RUN apk add --no-cache ca-certificates
+#7 CACHED
+
+#8 [4/4] COPY build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
+#8 CACHED
+
+#9 exporting to image
+#9 exporting layers done
+#9 writing image sha256:048dad2ba136d4bc16808ccc0fb200e7aef3f66b438c47233c5648280b9a8b5b done
+#9 naming to docker.io/library/jvm-test-genzgc done
+#9 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/g2n66qufe760sn7649c3hkx84

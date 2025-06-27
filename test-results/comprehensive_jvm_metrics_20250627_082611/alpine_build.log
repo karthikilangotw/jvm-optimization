@@ -1,0 +1,78 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile-alpine
+#1 transferring dockerfile: 2.05kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/alpine:3.19
+#2 ...
+
+#3 [auth] library/amazoncorretto:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/amazoncorretto:21-alpine
+#4 ...
+
+#5 [auth] library/alpine:pull token for registry-1.docker.io
+#5 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/amazoncorretto:21-alpine
+#4 ...
+
+#2 [internal] load metadata for docker.io/library/alpine:3.19
+#2 DONE 1.7s
+
+#4 [internal] load metadata for docker.io/library/amazoncorretto:21-alpine
+#4 DONE 2.0s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [jre-builder 1/6] FROM docker.io/library/amazoncorretto:21-alpine@sha256:937a7f5c5f7ec41315f1c7238fd9ec0347684d6d99e086db81201ca21d1f5778
+#7 DONE 0.0s
+
+#8 [stage-1 1/6] FROM docker.io/library/alpine:3.19@sha256:e5d0aea7f7d2954678a9a6269ca2d06e06591881161961ea59e974dff3f12377
+#8 DONE 0.0s
+
+#9 [internal] load build context
+#9 transferring context: 224B done
+#9 DONE 0.0s
+
+#10 [jre-builder 6/6] RUN /jre/bin/java -version
+#10 CACHED
+
+#11 [jre-builder 4/6] COPY build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
+#11 CACHED
+
+#12 [stage-1 2/6] WORKDIR /app
+#12 CACHED
+
+#13 [jre-builder 3/6] RUN apk add --no-cache unzip binutils
+#13 CACHED
+
+#14 [stage-1 4/6] COPY --from=jre-builder /jre /jre
+#14 CACHED
+
+#15 [stage-1 5/6] COPY build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
+#15 CACHED
+
+#16 [stage-1 3/6] RUN apk add --no-cache     ca-certificates     fontconfig     libstdc++     && rm -rf /var/cache/apk/*
+#16 CACHED
+
+#17 [jre-builder 5/6] RUN unzip app.jar -d temp &&     jdeps         --print-module-deps         --ignore-missing-deps         --recursive         --multi-release 21         --class-path="./temp/BOOT-INF/lib/*"         --module-path="./temp/BOOT-INF/lib/*"         app.jar > /modules.txt &&     echo "Found modules:" &&     cat /modules.txt &&     jlink         --verbose         --add-modules "$(cat /modules.txt),jdk.crypto.ec,jdk.crypto.cryptoki"         --strip-debug         --no-man-pages         --no-header-files         --compress=2         --output /jre &&     echo "Custom JRE created successfully" &&     ls -la /jre/bin/
+#17 CACHED
+
+#18 [jre-builder 2/6] WORKDIR /app
+#18 CACHED
+
+#19 [stage-1 6/6] RUN addgroup -g 1000 appuser &&     adduser -u 1000 -G appuser -s /bin/sh -D appuser &&     chown -R appuser:appuser /app
+#19 CACHED
+
+#20 exporting to image
+#20 exporting layers done
+#20 writing image sha256:572e4ac83b3a40d9ce267b468f29310fedd751fa3827a77f30a244940e95f52a done
+#20 naming to docker.io/library/jvm-metrics-alpine done
+#20 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/l9s6mdkl8ke4gr6wdkckohcbl

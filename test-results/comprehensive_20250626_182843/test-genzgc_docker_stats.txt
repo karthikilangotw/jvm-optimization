@@ -1,0 +1,2 @@
+CONTAINER     CPU %     MEM USAGE / LIMIT
+test-genzgc   0.58%     408.2MiB / 512MiB

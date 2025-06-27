@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker Configuration Performance Comparison</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .success { color: green; }
+        .failed { color: red; }
+        .metric { font-weight: bold; }
+        .best { background-color: #e8f5e8; }
+    </style>
+</head>
+<body>
+    <h1>Docker Configuration Performance Comparison</h1>
+    <p>Generated on: $(date)</p>
+    
+    <h2>Results Summary</h2>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Configuration</th>
+                <th>Build Time (s)</th>
+                <th>Image Size (MB)</th>
+                <th>Startup Time (s)</th>
+                <th>Avg Memory (MB)</th>
+                <th>Avg CPU (%)</th>
+                <th>Heap Used (MB)</th>
+                <th>Heap Max (MB)</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>

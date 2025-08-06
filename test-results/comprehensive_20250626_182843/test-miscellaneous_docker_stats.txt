@@ -1,2 +1,0 @@
-CONTAINER            CPU %     MEM USAGE / LIMIT
-test-miscellaneous   0.44%     510.8MiB / 512MiB

@@ -1,2 +1,0 @@
-CONTAINER   CPU %     MEM USAGE / LIMIT
-test-main   0.49%     215.2MiB / 512MiB

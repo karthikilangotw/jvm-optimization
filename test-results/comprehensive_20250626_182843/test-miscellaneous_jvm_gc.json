@@ -1,1 +1,0 @@
-{"name":"jvm.gc.memory.allocated","description":"Incremented for an increase in the size of the (young) heap memory pool after one GC to before the next","baseUnit":"bytes","measurements":[{"statistic":"COUNT","value":3.96361728E8}],"availableTags":[{"tag":"environment","values":["development"]},{"tag":"application","values":["demo"]}]}

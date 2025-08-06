@@ -1,2 +1,0 @@
-CONTAINER         CPU %     MEM USAGE / LIMIT
-test-distroless   0.44%     214.5MiB / 512MiB

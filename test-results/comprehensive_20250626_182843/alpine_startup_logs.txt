@@ -1,1 +1,0 @@
-exec /opt/custom-jre/bin/java: no such file or directory

@@ -1,2 +1,0 @@
-CONTAINER          CPU %     MEM USAGE / LIMIT
-test-traditional   0.35%     215.9MiB / 512MiB

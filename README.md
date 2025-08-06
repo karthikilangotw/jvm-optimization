@@ -1,15 +1,13 @@
-# JVM Optimization Demo
+# Spring Boot Demo Application
 
-A Spring Boot application demonstrating JVM optimization techniques with comprehensive monitoring and observability.
+A Spring Boot application demonstrating REST API development with comprehensive testing and monitoring.
 
 ## 🚀 Features
 
 - **REST API**: Order management endpoints
-- **JVM Metrics**: Custom and built-in JVM monitoring
-- **Prometheus Integration**: Metrics collection and storage
-- **Grafana Dashboards**: Real-time visualization
-- **Docker Optimization**: Multiple containerization strategies
 - **Spring Boot Actuator**: Production-ready monitoring endpoints
+- **Comprehensive Testing**: Unit, integration, and end-to-end tests
+- **Thread-Safe Operations**: Concurrent request handling
 
 ## 📊 Available Endpoints
 
@@ -20,12 +18,7 @@ A Spring Boot application demonstrating JVM optimization techniques with compreh
 
 ### Monitoring Endpoints
 - `GET /actuator/health` - Application health check
-- `GET /actuator/metrics` - Available metrics list
-- `GET /actuator/prometheus` - Prometheus-formatted metrics
-- `GET /jvm/metrics` - Custom JVM metrics (comprehensive)
-- `GET /jvm/memory` - Memory-specific metrics
-- `GET /jvm/gc` - Garbage collection metrics
-- `GET /jvm/threads` - Thread metrics
+- `GET /actuator/info` - Application information
 
 ## 🔧 Quick Start
 
@@ -34,17 +27,7 @@ A Spring Boot application demonstrating JVM optimization techniques with compreh
 ./gradlew bootRun
 ```
 
-### 2. Start Monitoring Stack
-```bash
-docker-compose -f docker-compose-monitoring.yml up -d
-```
-
-### 3. Access Dashboards
-- **Application**: http://localhost:8080
-- **Prometheus**: http://localhost:9090
-- **Grafana**: http://localhost:3000 (admin/admin)
-
-### 4. Test the API
+### 2. Test the API
 ```bash
 # Create an order
 curl -X POST http://localhost:8080/orders \
@@ -54,72 +37,20 @@ curl -X POST http://localhost:8080/orders \
 # Get all orders
 curl http://localhost:8080/orders
 
-# Check JVM metrics
-curl http://localhost:8080/jvm/metrics
+# Get specific order
+curl http://localhost:8080/orders/test-1
+
+# Check application health
+curl http://localhost:8080/actuator/health
 ```
 
 ## 🐳 Docker Deployment
 
 ### Standard Deployment
 ```bash
-docker build -t jvm-optimization-demo .
-docker run -p 8080:8080 jvm-optimization-demo
+docker build -t spring-boot-demo .
+docker run -p 8080:8080 spring-boot-demo
 ```
-
-### Alternative Dockerfiles
-The `dockerfiles/` directory contains various optimization strategies:
-- `Dockerfile-alpine` - Minimal Alpine-based image
-- `Dockerfile-distroless` - Google Distroless base
-- `Dockerfile-genzgc` - With Generational ZGC
-- `Dockerfile-jre-slim` - OpenJDK JRE slim variant
-
-## 📈 Monitoring Setup
-
-### Prometheus Metrics
-The application exposes metrics at `/actuator/prometheus` including:
-- JVM memory usage (`jvm_memory_used_bytes`)
-- Garbage collection (`jvm_gc_pause_seconds`)
-- HTTP requests (`http_server_requests_seconds`)
-- Custom application metrics (`orders_active_count`)
-
-### Grafana Dashboards
-Pre-configured dashboards for:
-- JVM Memory Usage
-- Garbage Collection Performance
-- HTTP Request Metrics
-- Application-Specific Metrics
-
-### Key Metrics to Monitor
-```promql
-# Memory utilization
-jvm_memory_used_bytes{application="demo"} / jvm_memory_max_bytes{application="demo"}
-
-# GC pause time
-rate(jvm_gc_pause_seconds_sum[5m])
-
-# Request rate
-rate(http_server_requests_seconds_count[5m])
-
-# Active orders
-orders_active_count{application="demo"}
-```
-
-## ⚡ JVM Optimization Features
-
-### Garbage Collection
-- **G1GC**: Low-latency garbage collection
-- **Optimized pause times**: Target 200ms max pause
-- **Memory-aware**: Automatic heap sizing based on container limits
-
-### Memory Management
-- **Container-aware**: Uses percentage of available RAM
-- **String optimization**: Deduplication enabled
-- **Heap dumps**: Automatic on OOM errors
-
-### Performance Tuning
-- **Tiered compilation**: Optimized startup time
-- **String concatenation**: Enhanced performance
-- **Monitoring**: Built-in JFR and metrics
 
 ## 🛠️ Development
 
@@ -138,37 +69,50 @@ orders_active_count{application="demo"}
 ./gradlew clean
 ```
 
-### Local Development with Monitoring
-```bash
-# Terminal 1: Start application
-./gradlew bootRun
-
-# Terminal 2: Start monitoring
-docker-compose -f docker-compose-monitoring.yml up -d
-
-# Terminal 3: Generate load for testing
-for i in {1..100}; do 
-  curl -X POST http://localhost:8080/orders \
-    -H "Content-Type: application/json" \
-    -d "{\"id\": \"load-$i\", \"description\": \"Load test $i\"}"
-done
-```
-
 ## 📦 Project Structure
 
 ```
-├── src/main/kotlin/com/jvm/optimization/demo/
+├── src/main/kotlin/com/example/demo/
 │   ├── DemoApplication.kt          # Main application
 │   ├── Order.kt                    # Order model
 │   ├── OrderController.kt          # REST controller
-│   ├── OrderService.kt             # Business logic
-│   ├── JvmMetricsController.kt     # Custom metrics endpoint
-│   └── MetricsConfiguration.kt     # Custom metrics configuration
-├── dockerfiles/                    # Various Docker strategies
-├── monitoring/                     # Prometheus & Grafana config
-├── docker-compose-monitoring.yml   # Monitoring stack
-├── Dockerfile                     # Optimized production image
+│   └── OrderService.kt             # Business logic
+├── src/test/kotlin/com/example/demo/
+│   ├── OrderTest.kt                # Unit tests for Order
+│   ├── OrderServiceTest.kt         # Unit tests for OrderService
+│   ├── OrderControllerTest.kt      # Unit tests for OrderController
+│   ├── DemoApplicationIntegrationTest.kt    # Integration tests
+│   ├── ActuatorEndpointsIntegrationTest.kt  # Actuator tests
+│   └── OrderApiEndToEndTest.kt     # End-to-end tests
+├── Dockerfile                      # Docker configuration
 └── build.gradle.kts               # Build configuration
+```
+
+## 🔍 Testing
+
+The application includes comprehensive testing:
+
+### Unit Tests
+- **OrderTest**: Data class functionality
+- **OrderServiceTest**: Business logic and concurrency
+- **OrderControllerTest**: REST API layer
+
+### Integration Tests
+- **DemoApplicationIntegrationTest**: Full application context
+- **ActuatorEndpointsIntegrationTest**: Health and monitoring endpoints
+
+### End-to-End Tests
+- **OrderApiEndToEndTest**: Complete API workflows
+
+### Run Tests
+```bash
+# Run all tests
+./gradlew test
+
+# Run specific test categories
+./gradlew test --tests "*Test"           # Unit tests
+./gradlew test --tests "*IntegrationTest" # Integration tests
+./gradlew test --tests "*EndToEndTest"    # End-to-end tests
 ```
 
 ## 🔍 Troubleshooting
@@ -178,19 +122,9 @@ done
 curl http://localhost:8080/actuator/health
 ```
 
-### Verify Metrics Collection
+### Check Application Logs
 ```bash
-curl http://localhost:8080/actuator/prometheus | grep jvm_memory
-```
-
-### Monitor Container Resources
-```bash
-docker stats prometheus grafana
-```
-
-### Access Logs
-```bash
-docker-compose -f docker-compose-monitoring.yml logs -f
+./gradlew bootRun --info
 ```
 
 ## 📝 License
@@ -207,4 +141,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Happy optimizing! 🚀**
+**Happy coding! 🚀**
